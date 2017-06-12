@@ -1,20 +1,25 @@
-<template>
-  <div id="signUp">
+<style lang="scss" scoped>
 
-  </div>
+@import "../../assets/styles/config.scss";
+@import "../../assets/styles/app.scss";
+
+</style>
+
+<template>
+
+<div id="signUp">
+
+</div>
+
 </template>
 
 <script>
-export default {
-  name: "signUp",
-  data: function data() {
-    return {
-    }
-  }
-}
-</script>
 
-<style lang="scss" scoped>
-@import "../../assets/styles/config.scss";
-@import "../../assets/styles/app.scss";
-</style>
+export default {
+    name: "signUp",
+    data: function data() {
+        return {}
+    }
+}
+
+</script>

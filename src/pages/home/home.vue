@@ -1,6 +1,8 @@
 <style lang="scss" scoped>
+
 @import "../../assets/styles/config.scss";
 @import "../../assets/styles/app.scss";
+
 </style>
 
 <template>
