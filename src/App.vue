@@ -1,7 +1,5 @@
 <style>
-
-
-
+@import "./assets/styles/app.scss";
 </style>
 
 <template>
