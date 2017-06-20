@@ -1,19 +1,12 @@
 <style lang="scss">
-
-
-
 </style>
 
 <template>
-
 <div id="dataGrid">
-  <div id="jsGrid" ref="jsGrid"></div>
 </div>
-
 </template>
 
 <script>
-
 export default {
     name: "dataGrid",
     data: function data() {
@@ -24,5 +17,4 @@ export default {
       var _this = this
     }
 }
-
 </script>

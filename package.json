@@ -10,7 +10,6 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "amazeui": "^2.7.2",
     "axios": "^0.16.2",
     "jquery": "^3.2.1",
     "vue": "^2.3.3",
