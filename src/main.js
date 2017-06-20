@@ -5,8 +5,6 @@ import {baseUrl} from './config/base'
 import 'amazeui/dist/css/amazeui.min.css'
 import 'amazeui/dist/js/amazeui.min'
 
-console.log(baseUrl);
-
 Vue.config.productionTip = false
 
 new Vue({
