@@ -8,7 +8,7 @@
     <el-row>
       <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
     </el-row>
-    <el-row>
+    <el-row :gutter="20">
       <el-col :span="4">
         <div class="grid-content bg-purple">
           <el-menu default-active="2" class="el-menu-vertical-demo" @open="" @close="">

@@ -7,7 +7,8 @@
 <template>
 
 <div id="home">
-  <data-grid></data-grid>
+<!--   <data-grid></data-grid> -->
+home
 </div>
 
 </template>
