@@ -6,6 +6,7 @@ import './assets/styles/app.scss'
 import App from './App'
 import router from './router/routers'
 import {baseUrl} from './config/base'
+import 'font-awesome/css/font-awesome.min.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)

@@ -11,6 +11,9 @@
       top: 0;
       height: 100%;
     }
+    >.right{
+      padding-top: $layoutPadding;
+    }
   }
 }
 </style>
@@ -22,7 +25,9 @@
       <el-col :span="4" class="left">
         <left-slider></left-slider>
       </el-col>
-      <el-col :offset="4" :span="20"></el-col>
+      <el-col :offset="4" :span="20" class="right">
+
+      </el-col>
     </el-row>
   </div>
 </template>
