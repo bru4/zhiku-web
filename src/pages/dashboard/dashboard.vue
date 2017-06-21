@@ -3,17 +3,15 @@
 </style>
 
 <template>
-<div id="home">
+<div class="dashboard" id="dashboard">
+  dashboard
 </div>
 </template>
 
 <script>
-import DataGrid from '@/components/dataGrid'
-
 export default {
-  name: "home",
+  name: "dashboard",
   components: {
-    'dataGrid': DataGrid
   },
   data: function data() {
     return {

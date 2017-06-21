@@ -1,1 +1,13 @@
-@import "./config.scss"
+@import "./config.scss";
+
+html, body{
+  height: 100%;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}

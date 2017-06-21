@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/home'
+import Layout from '@/pages/layout/layout'
+import Dashboard from '@/pages/dashboard/dashboard'
 
 Vue.use(Router)
 
@@ -9,8 +10,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
-      component: Home
+      name: '首页',
+      component: Layout,
+      redirect: '/dashboard',
+      children: [{ path: 'dashboard', component: Dashboard }]
     },
   ]
 })
