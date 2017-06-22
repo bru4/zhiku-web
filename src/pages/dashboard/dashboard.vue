@@ -1,5 +1,8 @@
 <style lang="scss" scoped>
 @import "../../assets/styles/config.scss";
+.input{
+  width: 50%;
+}
 </style>
 
 <template>
@@ -14,23 +17,29 @@
     <el-table-column prop="zip" label="邮编" width="200" sortable></el-table-column>
     <el-table-column fixed="right" label="操作" width="200">
       <template scope="scope">
-        <el-button type="text" @click="dialogEditFormVisible = true" size="small">编辑</el-button>
+        <el-button type="text" @click="showEditDialog(scope.$index, datas)" size="small">编辑</el-button>
         <el-button type="text" size="small">删除</el-button>
       </template>
     </el-table-column>
   </el-table>
 
   <!-- 编辑的dialog -->
-  <el-dialog size="small" title="收货地址" :visible.sync="dialogEditFormVisible">
-    <el-form :model="editForm">
-      <el-form-item label="活动名称" :label-width="formLabelWidth">
+  <el-dialog size="small" title="人员编辑" :visible.sync="dialogEditFormVisible">
+    <el-form :model="editForm" :rules="rules">
+      <el-form-item label="姓名" :label-width="formLabelWidth" prop="name">
         <el-input class="input" v-model="editForm.name" auto-complete="off"></el-input>
       </el-form-item>
-      <el-form-item label="活动区域" :label-width="formLabelWidth">
-        <el-select v-model="editForm.region" placeholder="请选择活动区域">
-          <el-option label="区域一" value="shanghai"></el-option>
-          <el-option label="区域二" value="beijing"></el-option>
+      <el-form-item label="生日" :label-width="formLabelWidth">
+        <el-date-picker type="date" placeholder="选择日期" v-model="editForm.date"></el-date-picker>
+      </el-form-item>
+      <el-form-item label="地区" :label-width="formLabelWidth">
+        <el-select v-model="editForm.province" placeholder="请选择活动区域">
+          <el-option label="上海" value="上海"></el-option>
+          <el-option label="北京" value="北京"></el-option>
         </el-select>
+      </el-form-item>
+      <el-form-item label="详细地址" :label-width="formLabelWidth">
+        <el-input class="input" v-model="editForm.address" auto-complete="off"></el-input>
       </el-form-item>
     </el-form>
     <div slot="footer" class="dialog-footer">
@@ -52,7 +61,15 @@ export default {
       dialogEditFormVisible: false,
       editForm: {
         name: '',
-        region: ''
+        province: '',
+        date: '',
+        address: ''
+      },
+      rules: {
+          name: [
+            {required: true, message: '请输入姓名', trigger: 'blur'},
+            {min: 2, max: 5, message: '请输入2到5个字符', trigger: 'blur'}
+          ]
       },
       formLabelWidth: '120px',
       datas: [{
@@ -107,6 +124,12 @@ export default {
       }]
     }
   },
-  methods: {}
+  methods: {
+    showEditDialog: function(index, rows) {
+      var _this = this
+      this.dialogEditFormVisible = true
+      _this.editForm = _this.datas[index]
+    },
+  }
 }
 </script>
